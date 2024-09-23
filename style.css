@@ -6,6 +6,7 @@
     --color-de-fondo-seccion: #EAF2FD;
     --color-de-link: #000000;
     --color-de-texto: #464646;
+    --color-primario: #2A7AE4;
 }
 
 body {
@@ -121,7 +122,7 @@ a {
     font-size: 0.9rem;
 }
 
-/*------------------------------ Sección de Habilidades ------------------------------*/
+/*------------------------------ Sección de Habilidades y Aficiones ------------------------------*/
 
 
 .habilidades__titulo,
@@ -164,8 +165,6 @@ a {
     margin: 0;
 }
 
-/*------------------------------ Sección de Aficiones --------------------------------*/
-
 
 /*------------------------------ Sección de Formación academica -------------------------------*/
 
@@ -178,7 +177,7 @@ a {
     margin: 0;
     padding: 32px 0 0 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
@@ -186,6 +185,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex-grow: 1;
 }
 
 .formacion__icono-contenedor {
@@ -193,12 +193,12 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 118px;
     background-color: white;
 }
 
 .formacion__icono {
     max-width: 80px;
-    padding: 35px 0 35px 0;
 }
 
 .formacion__titulo {
@@ -224,6 +224,15 @@ a {
 
 .proyectos {
     padding: 32px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.proyectos__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
 .proyectos__imagen {
@@ -237,8 +246,123 @@ a {
     text-align: center;
 }
 
+.proyectos__botones-contenedor {
+    display: flex;
+    gap: 16px;
+}
+
+.proyectos__boton-repositorio {
+    display: block;
+    padding: 12px 16px;
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.proyectos__boton-demo {
+    display: block;
+    padding: 12px 16px;
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 0.9rem;
+}
+
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    background-color: var(--color-de-fondo-seccion);
+}
+
+.contacto__contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacto__titulo {
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contacto__texto {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contacto__campo {
+    width: 100%;
+    border: none;
+    padding: 16px 0 16px 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    border-bottom: 1px solid #C8C8C8;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contacto__campo:focus {
+    border-bottom: 2px solid #2A7AE4;
+}
+
+.contacto__campo::placeholder {
+    color: #A2A2A2;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contacto__aviso {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #e20000;
+}
+
+.contacto__aviso-envio {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #00c200;
+}
+
+.contacto__campo--textarea {
+    resize: none;
+}
+
+.contacto__boton {
+    padding: 16px 32px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    width: 180px;
+}
+
+.contacto__boton:disabled {
+    background-color: #C8C8C8;
+    cursor: not-allowed;
+}
+
+.footer {
+    background-color: var(--color-de-fondo-menu);
+    padding: 32px;
+    text-align: center;
+}
+
+.footer__texto {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
