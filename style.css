@@ -1,5 +1,3 @@
-/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
-*/
 :root {
     --color-de-fondo: #F5F5F5;
     --color-de-fondo-menu: #ffffff;
@@ -74,7 +72,7 @@ a {
 }
 
 .presentacion__foto {
-    width: 30%;
+    width: 27%;
     border-radius: 50%;
     border: 5px solid #ffffff;
 }
@@ -131,13 +129,19 @@ a {
     font-weight: bold;
 }
 
+
+.habilidades,
+.aficiones {
+    padding: 16px;
+}
+
 .habilidades__lista,
 .aficiones__lista {
     margin: 0;
-    padding: 16px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
 }
 
 .habilidades__elemento,
@@ -169,13 +173,16 @@ a {
 /*------------------------------ Sección de Formación academica -------------------------------*/
 
 .formacion {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     padding: 32px;
     background-color: var(--color-de-fondo-seccion);
 }
 
 .formacion__lista {
     margin: 0;
-    padding: 32px 0 0 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -198,7 +205,7 @@ a {
 }
 
 .formacion__icono {
-    max-width: 80px;
+    width: 80px;
 }
 
 .formacion__titulo {
@@ -284,6 +291,10 @@ a {
     gap: 8px;
 }
 
+.contacto__imagen {
+    display: none;
+}
+
 .contacto__titulo {
     font-size: 1.375rem;
     font-weight: bold;
@@ -302,6 +313,7 @@ a {
 }
 
 .contacto__campo {
+    box-sizing: border-box;
     width: 100%;
     border: none;
     padding: 16px 0 16px 12px;
@@ -369,40 +381,215 @@ a {
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
     .cabecera {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 
     .cabecera__logo {
         max-width: 100px;
     }
 
-    .cabecera__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacion__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
     .navegacion__elemento a {
         font-size: 1rem;
     }
+
+
+    .sobre-mi,
+    .presentacion,
+    .habilidades,
+    .aficiones,
+    .formacion,
+    .proyectos {
+        padding: 32px;
+    }
+
+    .presentacion {
+        gap: 32px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .presentacion__titulo {
+        margin: 0;
+    }
+
+    .formacion__lista {
+        flex-wrap: nowrap;
+    }
+
+    .formacion__elemento {
+        width: 224px;
+        height: 169px;
+    }
+
+    .formacion__icono-contenedor {
+        width: 100%;
+        height: 118px;
+
+    }
+
 }
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
 
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
     .cabecera__titulo {
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
 
-    .navegacion__elemento a {
-        font-size: 1.1rem;
+    .navegacion__lista li:nth-child(-n+5) {
+        display: block;
     }
+
+    .navegacion__lista li:nth-child(6) {
+        font-weight: bold;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        gap: 32px;
+    }
+
+    .redes {
+        gap: 32px;
+    }
+
+    .redes li {
+        flex-grow: 0;
+    }
+
+    .presentacion {
+        gap: 17px;
+    }
+
+    .presentacion__titulo {
+        font-size: 3.25rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1.375rem;
+    }
+
+    .sobre-mi__titulo,
+    .habilidades__titulo,
+    .aficiones__titulo,
+    .formacion__titulo,
+    .proyectos__titulo,
+    .contacto__titulo {
+        font-size: 2rem;
+    }
+
+    .sobre-mi__texto,
+    .aficiones__texto {
+        font-size: 1rem;
+    }
+
+    .sobre-mi {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+    .cabecera,
+    .sobre-mi,
+    .presentacion,
+    .habilidades,
+    .aficiones,
+    .formacion,
+    .proyectos,
+    .contacto {
+        padding-right: 152px;
+        padding-left: 152px;
+    }
+
+    .sobre-mi__contenedor {
+        width: 70%;
+    }
+
+    .contenedor-habilidades-aficiones {
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+        padding: 32px 32px 88px 32px;
+    }
+
+    .habilidades,
+    .aficiones {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .habilidades__titulo,
+    .aficiones__titulo {
+        margin: 0;
+    }
+
+    .formacion {
+        padding-top: 82px;
+        padding-bottom: 82px;
+    }
+
+    .formacion__lista {
+        flex-wrap: wrap;
+    }
+
+    .formacion__elemento {
+        width: 368px;
+        height: 347px;
+    }
+
+    .formacion__icono-contenedor {
+        width: 100%;
+        height: 286px;
+    }
+
+    .proyectos__contenedor:nth-child(2),
+    .proyectos__contenedor:nth-child(4) {
+        flex-direction: row-reverse;
+
+    }
+
+    .proyectos__contenedor-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .proyectos__contenedor {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        padding-top: 130px;
+        padding-bottom: 65px;
+    }
+
+    .contacto__imagen {
+        display: block;
+        width: 29.5%;
+        object-fit: contain;
+    }
+
+    .contacto__contenedor-formulario {
+        display: flex;
+        width: 70.5%;
+        flex-direction: column;
+        gap: 32px;
+    }
+
 }

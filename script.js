@@ -23,6 +23,7 @@ function validarCampo(input, nombreCampo, caracteresMax) {
     } else if (input.length > caracteresMax) {
         document.getElementById("aviso-" + nombreCampo).innerHTML = `El ${nombreCampo} es demasiado extenso, intenta ingresar menos de ${caracteresMax} caracteres.`;
     } else {
+        document.getElementById("aviso-" + nombreCampo).innerHTML = "";
         return true;
     }
 
@@ -35,6 +36,7 @@ function validarEmail(email) {
     } else if (!email.match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)) {
         document.getElementById("aviso-email").innerHTML = "Por favor, ingresa un correo electrónico valido";
     } else {
+        document.getElementById("aviso-email").innerHTML = "";
         return true;
     }
 }
