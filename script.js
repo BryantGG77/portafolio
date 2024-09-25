@@ -1,7 +1,24 @@
-//La validación del formulário con javascript es considerada un desafío extra, no es obligatório realizar esta validación para realizar su entrega
+// Logica extra para verificar las anclas de los proyectos
+
+const enlaces = document.querySelectorAll('.boton-proyectos');
+
+// Recorre cada enlace
+enlaces.forEach(function (enlace) {
+    enlace.addEventListener('click', function (event) {
+        // Verifica si el enlace no tiene el atributo "href" o si está vacío
+        if (!enlace.hasAttribute('href') || enlace.getAttribute('href') === '' || enlace.getAttribute('href') === '#') {
+            event.preventDefault(); // Evita la acción predeterminada
+            alert('Este enlace no está disponible en este momento.');
+        }
+    });
+});
+
+
+// Logica JS para el formulario 
 
 let boton = document.getElementById("boton");
 
+// Validacion de los inputs para habilitar el boton de envio
 function verificarCampos() {
     let nombre = document.getElementById("nombre").value;
     let email = document.getElementById("email").value;
@@ -16,6 +33,7 @@ document.getElementById("email").addEventListener('input', verificarCampos);
 document.getElementById("asunto").addEventListener('input', verificarCampos);
 document.getElementById("mensaje").addEventListener('input', verificarCampos);
 
+// Funciones para verificar cada input segun las condiciones
 
 function validarCampo(input, nombreCampo, caracteresMax) {
     if (input === "") {
@@ -65,3 +83,5 @@ boton.addEventListener("click", (event) => {
         }, 2000);
     }
 });
+
+
