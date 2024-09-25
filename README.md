@@ -1,5 +1,8 @@
 # Portafolio Personal
 
+![Screenshot 2024-09-25 140408](https://github.com/user-attachments/assets/d2b511e5-807f-44c3-a7b5-738f450253a6)
+
+
 Este proyecto es un portafolio personal desarrollado con HTML, CSS y JavaScript. El objetivo principal es mostrar mis habilidades, proyectos y conocimientos como desarrollador front-end.
 
 ## Descripción
