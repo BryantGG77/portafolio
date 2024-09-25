@@ -29,5 +29,4 @@ El portafolio incluye diferentes secciones que permiten a los usuarios navegar f
 Puedes clonar el repositorio y abrir el archivo `index.html` en tu navegador:
 
 ```bash
-git clone https://github.com/usuario/portafolio.git
-cd portafolio
+git clone https://github.com/usuario/portafolio.git](https://github.com/BryantGG77/portafolio.git)
