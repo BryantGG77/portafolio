@@ -84,7 +84,7 @@ a {
 }
 
 .presentacion__subtitulo {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .redes {
@@ -118,7 +118,7 @@ a {
 }
 
 .sobre-mi__texto {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /*------------------------------ Sección de Habilidades y Aficiones ------------------------------*/
@@ -348,13 +348,13 @@ a {
 }
 
 .contacto__aviso {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0;
     color: #e20000;
 }
 
 .contacto__aviso-envio {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0;
     color: #00c200;
 }
@@ -429,6 +429,7 @@ a {
         margin: 0;
     }
 
+
     .formacion__lista {
         flex-wrap: nowrap;
     }
@@ -500,15 +501,20 @@ a {
     }
 
     .sobre-mi__texto,
-    .aficiones__texto {
-        font-size: 1rem;
+    .habilidades__nombre,
+    .aficiones__nombre,
+    .formacion__nombre,
+    .formacion__detalle,
+    .proyectos__nombre,
+    .contacto__texto {
+        font-size: 1.2rem;
     }
+
 
     .sobre-mi {
         padding-top: 64px;
         padding-bottom: 64px;
     }
-
 
 
 }
@@ -571,6 +577,10 @@ a {
         height: 286px;
     }
 
+    .proyectos__nombre {
+        margin: 0;
+    }
+
     .proyectos__contenedor:nth-child(2),
     .proyectos__contenedor:nth-child(4) {
         flex-direction: row-reverse;
@@ -585,8 +595,13 @@ a {
 
     .proyectos__contenedor {
         display: flex;
+        align-items: center;
         flex-direction: row;
         gap: 16px;
+    }
+
+    .proyectos__descripcion {
+        font-size: 1.1rem;
     }
 
     .contacto {
