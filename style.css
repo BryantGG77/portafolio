@@ -147,6 +147,9 @@ a {
 
 .habilidades__elemento,
 .aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 156px;
     flex-grow: 1;
     padding: 16px;
@@ -448,6 +451,21 @@ a {
         height: 40%;
     }
 
+    .proyectos__contenedor {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyectos__contenedor-imagen {
+        width: 70%;
+
+    }
+
+    .proyectos__contenedor-texto {
+        width: 70%;
+    }
 
 }
 
@@ -515,7 +533,6 @@ a {
         padding-top: 64px;
         padding-bottom: 64px;
     }
-
 
 }
 
@@ -598,6 +615,15 @@ a {
         align-items: center;
         flex-direction: row;
         gap: 16px;
+        width: 100%;
+    }
+
+    .proyectos__contenedor-imagen {
+        width: 50%;
+    }
+
+    .proyectos__contenedor-texto {
+        width: 50%;
     }
 
     .proyectos__descripcion {
