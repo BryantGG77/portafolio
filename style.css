@@ -7,6 +7,10 @@
     --color-primario: #bf83f4;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-de-fondo);
     font-family: 'Raleway', sans-serif;
